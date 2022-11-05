@@ -8,6 +8,19 @@
     <meta name="keywords" content="todo, website">
     <title>To-Do list</title>
 
+    <!-- Page load time calculation -->
+    <script>
+        (() => {
+            let start = Date.now();
+            window.addEventListener("load", () => {
+                let end = Date.now();
+                let milliseconds = end - start
+                let seconds = milliseconds / 1000;
+                document.getElementById("loadTime").innerText = `${seconds} s`;
+            });
+        })();
+    </script>
+
     <!-- css libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
@@ -24,11 +37,16 @@
 </head>
 <body>
 
+
 <div class="page" id="top">
+
     <nav id="main-nav">
+
         <div class="full-wrapper relative">
+
             <div id="nav-logo-wrap">
-                <a href="/"><img src="https://sitebyme.ru/logo.png"></a>
+                <a href="/"><img
+                        src="https://sitebyme.ru/logo.png"></a>
             </div>
 
             <div id="nav-menu-wrap">
@@ -38,9 +56,9 @@
                         <li><a href="#">About</a></li>
                     </ul>
                 </div>
-
                 <div class="separator-menu"></div>
 
+                <!-- [end #nav-section] -->
                 <div id="nav-tools-section">
                     <ul>
                         <li><a href="#" class="submit-btn-nav">Donate</a></li>
@@ -48,8 +66,11 @@
                         <li><a href="#" class="register-btn-nav">Register</a></li>
                     </ul>
                 </div>
+
+                <!-- [end #nav-tools-section] -->
             </div>
 
+            <!-- humber menu & overlay menu-->
             <div class="button_container" id="toggle">
                 <span class="top"></span>
                 <span class="middle"></span>
@@ -68,14 +89,21 @@
                 </nav>
             </div>
 
+
             <div class="clear"></div>
+
+
         </div>
+
     </nav>
 
     <div class="home-section">
+
         <canvas id="canvas"></canvas>
 
         <div id="wrapper">
+
+
             <div id="home-content">
                 <div id="home-text">
                     <div id="title">
@@ -89,17 +117,24 @@
                         </h2>
 
                         <h3>Your best tool to organise work and study life</h3>
+
                     </div>
+                    <!-- [end #title] -->
 
                     <div class="local-scroll">
                         <a data-scroll href="#to-do" class="scroll-down">
                             <i class="fa fa-chevron-down"></i>
                         </a>
                     </div>
+                    <!-- [end #local-scroll] -->
                 </div>
+                <!-- [end #home-text] -->
             </div>
+            <!-- [end #home-content] -->
         </div>
+        <!-- [end #wrapper] -->
     </div>
+    <!-- [end .home-section] -->
 </div>
 
 <section class="page-section animated bkg-white p-0 mt-8" id="to-do">
@@ -116,6 +151,7 @@
 
     </div>
 </section>
+<!-- [end .page-section] -->
 
 <section class="page-section animated bkg-gray" id="about">
     <div class="container">
@@ -129,6 +165,7 @@
 
     </div>
 </section>
+<!-- [end .page-section] -->
 
 <section class="page-section animated bkg-white" id="aboutt">
     <div class="container">
@@ -144,6 +181,10 @@
 
     </div>
 </section>
+<!-- [end .page-section] -->
+
+
+<!-- [end page] -->
 
 <!-- ls libraries -->
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/js/smooth-scroll.polyfills.min.js"></script>
