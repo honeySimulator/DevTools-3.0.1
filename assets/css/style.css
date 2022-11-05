@@ -657,3 +657,43 @@ MEDIA QUERY
         display: none;
     }
 }
+
+/*****************************
+ CSS3 ANIMATIONS
+******************************/
+/* used for home scroll arrow */
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+        top: 30px;
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+        top: 31px;
+    }
+    100% {
+        opacity: 0;
+        transform: none;
+        top: 32px;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+        top: 30px;
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+        top: 31px;
+    }
+    100% {
+        opacity: 0;
+        transform: none;
+        top: 32px;
+    }
+}
